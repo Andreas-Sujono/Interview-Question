@@ -2,7 +2,7 @@ import random
 
 def main():
 	#assign the words
-	words = ['buku','roti','mobil','motor','baju','kaki','tangan','mata','biru','merah']
+	words = ['book','bread','car','motor','clothe','foot','hand','eyes','blue','red']
 	score = 0
 
 	#keep asking new question until no more words to ask
@@ -17,22 +17,22 @@ def main():
 		question = ''.join(listAns)
 		
 		# start asking question
-		print(f"Tebak kata: {question}")
-		userAns = input("Jawab: ")
+		print(f"guess word: {question}")
+		userAns = input("ans: ")
 
 		# keep asking user answer until the user input the right answer
 		while userAns != ans:
-			print("SALAH! Silakan coba lagi")
-			userAns = input("Jawab: ")
+			print("WRONG! try again")
+			userAns = input("ans: ")
 
 		score +=1
-		print(f"BENAR point anda : {score}")
+		print(f"RIGHT! your points : {score}")
 
 		# remove the words that has been became a question
 		words.remove(ans)
 
 	#game is ended, no more words
-	print("Yey anda telah menyelesaikan game!!!")
+	print("Congrats! You Have Finish The game!!!")
 
 if __name__ == "__main__":
 	main()
